@@ -36,7 +36,7 @@
       transform: scale(1.2);
     }
 
-    /* Header image (cropped and centered) */
+    /* Header image */
     .header-wrapper {
       position: absolute;
       top: 10px;
@@ -45,6 +45,7 @@
       width: 520px;
       height: 120px;
       overflow: hidden;
+      z-index: 1;
     }
 
     .header-img {
@@ -55,7 +56,7 @@
       display: block;
     }
 
-    /* Feature image (cropped and scaled) */
+    /* Feature image */
     .feature-container {
       width: 90%;
       margin: 0 auto;
@@ -66,7 +67,7 @@
       width: 100%;
       height: auto;
       object-fit: cover;
-      transform: translateY(-192px); /* approx 2in upward crop */
+      transform: translateY(-192px);
       display: block;
     }
 
@@ -88,7 +89,7 @@
       .header-wrapper {
         width: 85%;
         height: 90px;
-        top: 8px;
+        top: 72px; /* moved below arrow */
       }
 
       .header-img {
@@ -100,7 +101,7 @@
       }
 
       .feature-img {
-        transform: translateY(-60px); /* lighter crop for phones */
+        transform: translateY(-60px);
       }
     }
   </style>
@@ -108,7 +109,7 @@
 
 <body>
 
-  <!-- Back arrow FIRST for better mobile stacking -->
+  <!-- Back arrow -->
   <a href="index.html" class="back-wrapper">
     <img src="images/back-arrow.png" alt="Back to Home" class="back-img" />
   </a>
