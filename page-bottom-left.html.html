@@ -1,28 +1,88 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Bottom Left Page</title>
+
   <style>
     body {
-      font-family: sans-serif;
+      font-family: 'Comic Sans MS', cursive, sans-serif;
+      margin: 0;
+      padding: 160px 0 60px;
+      background: #fafafa;
       text-align: center;
-      padding: 60px 20px;
-      background-color: #fafafa;
+      color: #333;
     }
-    a {
-      display: inline-block;
+
+    /* Back arrow */
+    .back-wrapper {
+      position: absolute;
+      top: 10px;
+      left: 20px;
+      width: 90px;
+      height: 90px;
+      display: block;
+    }
+
+    .back-img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      transition: transform 0.3s ease;
+    }
+
+    .back-img:hover {
+      transform: scale(1.2);
+    }
+
+    /* Header image */
+    .header-wrapper {
+      position: absolute;
+      top: 10px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 520px;
+      height: 120px;
+      overflow: hidden;
+    }
+
+    .header-img {
+      width: 100%;
+      height: auto;
+      object-fit: contain;
+      transform: translateY(-30px);
+      display: block;
+    }
+
+    /* Centered "stay posted!" text */
+    .text-container {
+      width: 75%;
+      margin: 0 auto;
+      font-size: 3rem;
+      line-height: 1.2;
       margin-top: 40px;
-      font-size: 1.2rem;
-      text-decoration: none;
-      color: #1a73e8;
+      user-select: none;
     }
   </style>
 </head>
+
 <body>
-  <h1>Welcome to the Bottom Left Page</h1>
-  <p>Edit this page to showcase anything you want here.</p>
-  <a href="index.html">← Back to Home</a>
+
+  <!-- Back arrow -->
+  <a href="index.html" class="back-wrapper">
+    <img src="images/back-arrow.png" alt="Back to Home" class="back-img">
+  </a>
+
+  <!-- Header image -->
+  <div class="header-wrapper">
+    <img src="images/chelseapost-header.png" alt="Chelsea Post Header" class="header-img">
+  </div>
+
+  <!-- Centered text instead of image -->
+  <div class="text-container">
+    stay posted!
+  </div>
+
 </body>
 </html>
