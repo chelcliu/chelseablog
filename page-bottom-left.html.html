@@ -64,6 +64,37 @@
       margin-top: 40px;
       user-select: none;
     }
+
+    /* Responsive adjustments for small screens */
+    @media (max-width: 480px) {
+      .back-wrapper {
+        top: 5px;
+        left: 10px;
+        width: 60px;
+        height: 60px;
+      }
+
+      .header-wrapper {
+        width: 90%;
+        height: auto;
+        top: 5px;
+      }
+
+      .header-img {
+        transform: translateY(-15px);
+      }
+
+      .text-container {
+        width: 90%;
+        font-size: 2rem;
+        margin-top: 20px;
+        padding: 0 10px;
+      }
+
+      body {
+        padding: 120px 0 40px;
+      }
+    }
   </style>
 </head>
 
@@ -71,15 +102,15 @@
 
   <!-- Back arrow -->
   <a href="index.html" class="back-wrapper">
-    <img src="images/back-arrow.png" alt="Back to Home" class="back-img">
+    <img src="images/back-arrow.png" alt="Back to Home" class="back-img" />
   </a>
 
   <!-- Header image -->
   <div class="header-wrapper">
-    <img src="images/chelseapost-header.png" alt="Chelsea Post Header" class="header-img">
+    <img src="images/chelseapost-header.png" alt="Chelsea Post Header" class="header-img" />
   </div>
 
-  <!-- Centered text instead of image -->
+  <!-- Centered text -->
   <div class="text-container">
     stay posted!
   </div>

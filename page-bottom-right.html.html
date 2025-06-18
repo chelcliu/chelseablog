@@ -68,6 +68,38 @@
       display: block;
       transform: translateY(-72px);
     }
+
+    /* Responsive adjustments */
+    @media (max-width: 480px) {
+      body {
+        padding: 120px 0 40px;
+      }
+
+      .back-wrapper {
+        top: 5px;
+        left: 10px;
+        width: 60px;
+        height: 60px;
+      }
+
+      .header-wrapper {
+        width: 90%;
+        height: auto;
+        top: 5px;
+      }
+
+      .header-img {
+        transform: translateY(-15px);
+      }
+
+      .feature-container {
+        width: 90%;
+      }
+
+      .feature-img {
+        transform: translateY(-36px);
+      }
+    }
   </style>
 </head>
 
@@ -75,17 +107,17 @@
 
   <!-- Back arrow -->
   <a href="index.html" class="back-wrapper">
-    <img src="images/back-arrow.png" alt="Back to Home" class="back-img">
+    <img src="images/back-arrow.png" alt="Back to Home" class="back-img" />
   </a>
 
   <!-- Header image -->
   <div class="header-wrapper">
-    <img src="images/photooftheweek-header.png" alt="Photo of the Week" class="header-img">
+    <img src="images/photooftheweek-header.png" alt="Photo of the Week" class="header-img" />
   </div>
 
   <!-- Feature image -->
   <div class="feature-container">
-    <img src="images/photooftheweek1.png" alt="Featured Photo" class="feature-img">
+    <img src="images/photooftheweek1.png" alt="Featured Photo" class="feature-img" />
   </div>
 
 </body>
