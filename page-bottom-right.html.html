@@ -9,12 +9,12 @@
     body {
       font-family: sans-serif;
       margin: 0;
-      padding: 160px 0 60px;
+      padding: 160px 0 60px;      /* desktop spacing */
       background: #fafafa;
       text-align: center;
     }
 
-    /* Back arrow */
+    /* ---------- Back arrow ---------- */
     .back-wrapper {
       position: absolute;
       top: 10px;
@@ -22,20 +22,17 @@
       width: 90px;
       height: 90px;
       display: block;
+      z-index: 10;                /* stay above header */
     }
-
     .back-img {
       width: 100%;
       height: 100%;
       object-fit: contain;
       transition: transform 0.3s ease;
     }
+    .back-img:hover { transform: scale(1.2); }
 
-    .back-img:hover {
-      transform: scale(1.2);
-    }
-
-    /* Header image */
+    /* ---------- Header image ---------- */
     .header-wrapper {
       position: absolute;
       top: 10px;
@@ -44,60 +41,59 @@
       width: 520px;
       height: 120px;
       overflow: hidden;
+      z-index: 1;                 /* sits under arrow */
     }
-
     .header-img {
       width: 100%;
       height: auto;
       object-fit: contain;
-      transform: translateY(-30px);
+      transform: translateY(-30px); /* slight crop */
       display: block;
     }
 
-    /* Feature image container with upward shift */
+    /* ---------- Feature image ---------- */
     .feature-container {
-      width: 75%;
+      width: 75%;                /* 25 % narrower than full width */
       margin: 0 auto;
       overflow: hidden;
     }
-
     .feature-img {
       width: 100%;
       height: auto;
       object-fit: cover;
+      transform: translateY(-72px); /* shift up ~¾ in */
       display: block;
-      transform: translateY(-72px);
     }
 
-    /* Responsive adjustments */
+    /* ---------- MOBILE OPTIMIZATION (≤480 px) ---------- */
     @media (max-width: 480px) {
       body {
-        padding: 120px 0 40px;
+        padding: 220px 0 40px;   /* extra top space prevents collisions */
       }
 
       .back-wrapper {
-        top: 5px;
-        left: 10px;
-        width: 60px;
-        height: 60px;
+        top: 8px;
+        left: 8px;
+        width: 56px;
+        height: 56px;
+        z-index: 999;
+        pointer-events: auto;
       }
 
       .header-wrapper {
-        width: 90%;
-        height: auto;
-        top: 5px;
+        width: 85%;
+        height: 90px;
+        top: 72px;               /* arrow (8) + 56 + gap */
       }
-
       .header-img {
-        transform: translateY(-15px);
+        transform: translateY(-10px); /* lighter crop on phones */
       }
 
       .feature-container {
-        width: 90%;
+        width: 96%;
       }
-
       .feature-img {
-        transform: translateY(-36px);
+        transform: translateY(-36px); /* gentler upward shift */
       }
     }
   </style>
@@ -107,17 +103,17 @@
 
   <!-- Back arrow -->
   <a href="index.html" class="back-wrapper">
-    <img src="images/back-arrow.png" alt="Back to Home" class="back-img" />
+    <img src="images/back-arrow.png" alt="Back to Home" class="back-img">
   </a>
 
-  <!-- Header image -->
+  <!-- Header -->
   <div class="header-wrapper">
-    <img src="images/photooftheweek-header.png" alt="Photo of the Week" class="header-img" />
+    <img src="images/photooftheweek-header.png" alt="Photo of the Week" class="header-img">
   </div>
 
   <!-- Feature image -->
   <div class="feature-container">
-    <img src="images/photooftheweek1.png" alt="Featured Photo" class="feature-img" />
+    <img src="images/photooftheweek1.png" alt="Featured Photo" class="feature-img">
   </div>
 
 </body>
