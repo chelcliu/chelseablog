@@ -1,28 +1,92 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Top Page</title>
+
   <style>
     body {
       font-family: sans-serif;
+      margin: 0;
+      padding: 160px 0 60px;
+      background: #fafafa;
       text-align: center;
-      padding: 60px 20px;
-      background-color: #fafafa;
     }
-    a {
-      display: inline-block;
-      margin-top: 40px;
-      font-size: 1.2rem;
-      text-decoration: none;
-      color: #1a73e8;
+
+    /* Back arrow */
+    .back-wrapper {
+      position: absolute;
+      top: 10px;
+      left: 20px;
+      width: 90px;
+      height: 90px;
+      display: block;
+    }
+
+    .back-img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      transition: transform 0.3s ease;
+    }
+
+    .back-img:hover {
+      transform: scale(1.2);
+    }
+
+    /* Cropped & larger header image */
+    .header-wrapper {
+      position: absolute;
+      top: 10px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 520px;                /* made larger */
+      height: 120px;               /* limit height for cropping */
+      overflow: hidden;
+    }
+
+    .header-img {
+      width: 100%;
+      height: auto;
+      transform: translateY(-30px);  /* crop ~30px from top */
+      object-fit: contain;
+      display: block;
+    }
+
+    /* Feature image container (10% smaller, cropped 2in from top) */
+    .feature-container {
+      width: 90%;
+      margin: 0 auto;
+      overflow: hidden;
+    }
+
+    .feature-img {
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+      transform: translateY(-192px); /* crop ~2 inches from top */
+      display: block;
     }
   </style>
 </head>
+
 <body>
-  <h1>Welcome to the Top Page</h1>
-  <p>Edit this page to add anything you like — writing, images, links, etc.</p>
-  <a href="index.html">← Back to Home</a>
+
+  <!-- Back arrow -->
+  <a href="index.html" class="back-wrapper">
+    <img src="images/back-arrow.png" alt="Back to Home" class="back-img">
+  </a>
+
+  <!-- Header (cropped and enlarged) -->
+  <div class="header-wrapper">
+    <img src="images/hot-takes-header.png" alt="Site Title" class="header-img">
+  </div>
+
+  <!-- Feature image -->
+  <div class="feature-container">
+    <img src="images/hottake61825.png" alt="Feature Image" class="feature-img">
+  </div>
+
 </body>
 </html>
