@@ -73,8 +73,9 @@
 
     /* ----------- MOBILE OPTIMIZATION (≤480px) ----------- */
     @media (max-width: 480px) {
+      /* Add top space to prevent overlap with header */
       body {
-        padding: 100px 0 40px;
+        padding: 220px 0 40px;
       }
 
       .back-wrapper {
@@ -89,7 +90,7 @@
       .header-wrapper {
         width: 85%;
         height: 90px;
-        top: 72px; /* moved below arrow */
+        top: 72px;
       }
 
       .header-img {
@@ -114,7 +115,7 @@
     <img src="images/back-arrow.png" alt="Back to Home" class="back-img" />
   </a>
 
-  <!-- Header -->
+  <!-- Header image -->
   <div class="header-wrapper">
     <img src="images/hot-takes-header.png" alt="Site Title" class="header-img" />
   </div>
