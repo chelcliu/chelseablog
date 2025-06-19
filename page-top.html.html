@@ -60,7 +60,7 @@
     .middle-container {
       width: 85%;
       overflow: hidden;
-      margin: 2px auto 0; /* Reduced top margin */
+      margin: 2px auto 0;
     }
 
     .middle-img {
@@ -74,7 +74,7 @@
     /* Feature image */
     .feature-container {
       width: 90%;
-      margin: 4px auto 0; /* Reduced top margin */
+      margin: 4px auto 0;
     }
 
     .feature-img {
@@ -110,17 +110,20 @@
 
       .middle-container {
         width: 94%;
-        margin-top: 2px; /* Reduced margin */
+        margin-top: 2px;
+        overflow: visible;  /* allow full image display on mobile */
       }
 
       .middle-img {
-        transform: translateY(-72px);
-        padding-bottom: 72px;
+        transform: none !important;    /* remove cropping transform */
+        padding-bottom: 0 !important;  /* remove padding */
+        height: auto;
+        max-width: 100%;
       }
 
       .feature-container {
         width: 96%;
-        margin-top: 4px; /* Reduced margin */
+        margin-top: 4px;
       }
     }
   </style>
