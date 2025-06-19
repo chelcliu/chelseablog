@@ -9,7 +9,7 @@
     body {
       font-family: sans-serif;
       margin: 0;
-      padding: 160px 0 60px;
+      padding: 220px 0 40px;
       background: #fafafa;
       text-align: center;
     }
@@ -56,26 +56,37 @@
       display: block;
     }
 
+    /* Middle image (crop only top) */
+    .middle-container {
+      width: 85%;
+      overflow: hidden;
+      margin: 2px auto 0; /* Reduced top margin */
+    }
+
+    .middle-img {
+      width: 100%;
+      height: auto;
+      transform: translateY(-96px); /* crop only top */
+      padding-bottom: 96px;         /* add padding to show bottom fully */
+      display: block;
+    }
+
     /* Feature image */
     .feature-container {
       width: 90%;
-      margin: 0 auto;
-      overflow: hidden;
+      margin: 4px auto 0; /* Reduced top margin */
     }
 
     .feature-img {
       width: 100%;
       height: auto;
-      object-fit: cover;
-      transform: translateY(-192px);
       display: block;
     }
 
-    /* ----------- MOBILE OPTIMIZATION (≤480px) ----------- */
+    /* ---------- MOBILE (≤480px) ---------- */
     @media (max-width: 480px) {
-      /* Add top space to prevent overlap with header */
       body {
-        padding: 220px 0 40px;
+        padding: 250px 0 30px;
       }
 
       .back-wrapper {
@@ -97,12 +108,19 @@
         transform: translateY(-10px);
       }
 
-      .feature-container {
-        width: 96%;
+      .middle-container {
+        width: 94%;
+        margin-top: 2px; /* Reduced margin */
       }
 
-      .feature-img {
-        transform: translateY(-60px);
+      .middle-img {
+        transform: translateY(-72px);
+        padding-bottom: 72px;
+      }
+
+      .feature-container {
+        width: 96%;
+        margin-top: 4px; /* Reduced margin */
       }
     }
   </style>
@@ -118,6 +136,11 @@
   <!-- Header image -->
   <div class="header-wrapper">
     <img src="images/hot-takes-header.png" alt="Site Title" class="header-img" />
+  </div>
+
+  <!-- Middle image (crop only top) -->
+  <div class="middle-container">
+    <img src="images/hottake2.png" alt="Middle Image" class="middle-img" />
   </div>
 
   <!-- Feature image -->
