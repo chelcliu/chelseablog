@@ -9,7 +9,7 @@
     body {
       font-family: sans-serif;
       margin: 0;
-      padding: 160px 0 60px;      /* desktop spacing */
+      padding: 160px 0 60px;
       background: #fafafa;
       text-align: center;
     }
@@ -22,7 +22,7 @@
       width: 90px;
       height: 90px;
       display: block;
-      z-index: 10;                /* stay above header */
+      z-index: 10;
     }
     .back-img {
       width: 100%;
@@ -41,34 +41,45 @@
       width: 520px;
       height: 120px;
       overflow: hidden;
-      z-index: 1;                 /* sits under arrow */
+      z-index: 1;
     }
     .header-img {
       width: 100%;
       height: auto;
       object-fit: contain;
-      transform: translateY(-30px); /* slight crop */
+      transform: translateY(-30px);
       display: block;
     }
 
-    /* ---------- Feature image ---------- */
+    /* ---------- NEW upper image ---------- */
+    .upper-feature-container {
+      width: 80%;
+      margin: 20px auto 0;
+    }
+    .upper-img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    /* ---------- Existing feature image ---------- */
     .feature-container {
-      width: 75%;                /* 25 % narrower than full width */
-      margin: 0 auto;
+      width: 75%;
+      margin: 12px auto 0;
       overflow: hidden;
     }
     .feature-img {
       width: 100%;
       height: auto;
       object-fit: cover;
-      transform: translateY(-72px); /* shift up ~¾ in */
+      transform: translateY(-72px);
       display: block;
     }
 
     /* ---------- MOBILE OPTIMIZATION (≤480 px) ---------- */
     @media (max-width: 480px) {
       body {
-        padding: 220px 0 40px;   /* extra top space prevents collisions */
+        padding: 220px 0 40px;
       }
 
       .back-wrapper {
@@ -83,17 +94,25 @@
       .header-wrapper {
         width: 85%;
         height: 90px;
-        top: 72px;               /* arrow (8) + 56 + gap */
+        top: 72px;
       }
+
       .header-img {
-        transform: translateY(-10px); /* lighter crop on phones */
+        transform: translateY(-10px);
+      }
+
+      .upper-feature-container {
+        width: 94%;
+        margin-top: 16px;
       }
 
       .feature-container {
         width: 96%;
+        margin-top: 8px;
       }
+
       .feature-img {
-        transform: translateY(-36px); /* gentler upward shift */
+        transform: translateY(-36px);
       }
     }
   </style>
@@ -111,7 +130,12 @@
     <img src="images/photooftheweek-header.png" alt="Photo of the Week" class="header-img">
   </div>
 
-  <!-- Feature image -->
+  <!-- NEW upper image -->
+  <div class="upper-feature-container">
+    <img src="images/photooftheweek2.png" alt="Additional Photo" class="upper-img">
+  </div>
+
+  <!-- Existing feature image -->
   <div class="feature-container">
     <img src="images/photooftheweek1.png" alt="Featured Photo" class="feature-img">
   </div>
