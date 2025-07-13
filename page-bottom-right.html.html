@@ -51,7 +51,18 @@
       display: block;
     }
 
-    /* ---------- NEW upper image ---------- */
+    /* ---------- TOP (new) feature image ---------- */
+    .top-feature-container {
+      width: 80%;
+      margin: 160px auto 0; /* Adjusted to appear after header */
+    }
+    .top-img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    /* ---------- UPPER (existing photooftheweek2) image ---------- */
     .upper-feature-container {
       width: 80%;
       margin: 20px auto 0;
@@ -62,7 +73,7 @@
       display: block;
     }
 
-    /* ---------- Existing feature image ---------- */
+    /* ---------- Existing feature image (photooftheweek1) ---------- */
     .feature-container {
       width: 75%;
       margin: 12px auto 0;
@@ -101,9 +112,14 @@
         transform: translateY(-10px);
       }
 
+      .top-feature-container,
       .upper-feature-container {
         width: 94%;
         margin-top: 16px;
+      }
+
+      .top-feature-container {
+        margin-top: 220px; /* pushes image after header on small screens */
       }
 
       .feature-container {
@@ -130,12 +146,17 @@
     <img src="images/photooftheweek-header.png" alt="Photo of the Week" class="header-img">
   </div>
 
-  <!-- NEW upper image -->
+  <!-- TOP new image (photooftheweek3) -->
+  <div class="top-feature-container">
+    <img src="images/photooftheweek3.png" alt="Top Featured Photo" class="top-img">
+  </div>
+
+  <!-- UPPER existing image (photooftheweek2) -->
   <div class="upper-feature-container">
     <img src="images/photooftheweek2.png" alt="Additional Photo" class="upper-img">
   </div>
 
-  <!-- Existing feature image -->
+  <!-- Existing feature image (photooftheweek1) -->
   <div class="feature-container">
     <img src="images/photooftheweek1.png" alt="Featured Photo" class="feature-img">
   </div>
