@@ -9,7 +9,7 @@
     body {
       font-family: sans-serif;
       margin: 0;
-      padding: 220px 0 40px;
+      padding: 220px 0 40px; /* Desktop top padding */
       background: #fafafa;
       text-align: center;
     }
@@ -56,7 +56,7 @@
       display: block;
     }
 
-    /* Middle image (crop only top) */
+    /* Middle image container */
     .middle-container {
       width: 85%;
       overflow: hidden;
@@ -66,9 +66,13 @@
     .middle-img {
       width: 100%;
       height: auto;
-      transform: translateY(-96px); /* crop only top */
-      padding-bottom: 96px;         /* add padding to show bottom fully */
+      transform: translateY(-80px);  /* Less top crop */
+      padding-bottom: 80px;          /* Adjust to match */
       display: block;
+    }
+
+    .middle-container.first {
+      margin-top: 20px;
     }
 
     /* Feature image */
@@ -86,7 +90,7 @@
     /* ---------- MOBILE (≤480px) ---------- */
     @media (max-width: 480px) {
       body {
-        padding: 250px 0 30px;
+        padding: 160px 0 30px; /* Reduced mobile padding */
       }
 
       .back-wrapper {
@@ -110,13 +114,17 @@
 
       .middle-container {
         width: 94%;
-        margin-top: 2px;
-        overflow: visible;  /* allow full image display on mobile */
+        margin-top: 12px;
+        overflow: visible;
+      }
+
+      .middle-container.first {
+        margin-top: 20px;
       }
 
       .middle-img {
-        transform: none !important;    /* remove cropping transform */
-        padding-bottom: 0 !important;  /* remove padding */
+        transform: none !important;
+        padding-bottom: 0 !important;
         height: auto;
         max-width: 100%;
       }
@@ -141,9 +149,14 @@
     <img src="images/hot-takes-header.png" alt="Site Title" class="header-img" />
   </div>
 
-  <!-- Middle image (crop only top) -->
+  <!-- hottake3.png with less crop -->
+  <div class="middle-container first">
+    <img src="images/hottake3.png" alt="Hot Take 3" class="middle-img" />
+  </div>
+
+  <!-- hottake2.png with less crop -->
   <div class="middle-container">
-    <img src="images/hottake2.png" alt="Middle Image" class="middle-img" />
+    <img src="images/hottake2.png" alt="Hot Take 2" class="middle-img" />
   </div>
 
   <!-- Feature image -->
