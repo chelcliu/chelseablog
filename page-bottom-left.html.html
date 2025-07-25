@@ -7,100 +7,92 @@
 
   <style>
     /* ---------- Base layout ---------- */
-    body{
-      font-family:'Comic Sans MS', cursive, sans-serif;
-      margin:0;
-      padding:160px 0 60px;          /* desktop spacing */
-      background:#fafafa;
-      text-align:center;
-      color:#333;
+    body {
+      font-family: 'Comic Sans MS', cursive, sans-serif;
+      margin: 0;
+      padding: 160px 0 60px; /* desktop spacing */
+      background: #fafafa;
+      text-align: center;
+      color: #333;
     }
 
     /* ---------- Back arrow ---------- */
-    .back-wrapper{
-      position:absolute;
-      top:10px;left:20px;
-      width:90px;height:90px;
-      z-index:10;
-      display:block;
+    .back-wrapper {
+      position: absolute;
+      top: 10px;
+      left: 20px;
+      width: 90px;
+      height: 90px;
+      z-index: 10;
+      display: block;
     }
-    .back-img{
-      width:100%;height:100%;object-fit:contain;
-      transition:transform .3s ease;
+    .back-img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      transition: transform 0.3s ease;
     }
-    .back-img:hover{transform:scale(1.2);}
+    .back-img:hover { transform: scale(1.2); }
 
     /* ---------- Header image ---------- */
-    .header-wrapper{
-      position:absolute;
-      top:10px;
-      left:50%;
-      transform:translateX(-50%);
-      width:520px;height:120px;
-      overflow:hidden;
-      z-index:1;
+    .header-wrapper {
+      position: absolute;
+      top: 10px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 520px;
+      height: 120px;
+      overflow: hidden;
+      z-index: 1;
     }
-    .header-img{
-      width:100%;height:auto;display:block;
-      object-fit:contain;
-      transform:translateY(-30px);
-    }
-
-    /* ---------- NEW upper image ---------- */
-    .upper-feature-container{
-      width:85%;
-      margin:20px auto 0;             /* gap below header */
-    }
-    .upper-img{
-      width:80%;                      /* 20 % smaller */
-      height:auto;
-      margin:0 auto;
-      display:block;
+    .header-img {
+      width: 100%;
+      height: auto;
+      display: block;
+      object-fit: contain;
+      transform: translateY(-30px);
     }
 
-    /* ---------- Existing feature image ---------- */
-    .feature-container{
-      width:85%;
-      margin:12px auto 0;             /* small gap below upper image */
+    /* ---------- Post image containers ---------- */
+    .post-container {
+      width: 85%;
+      margin: 20px auto 0;
     }
-    .feature-img{
-      width:80%;                      /* 20 % smaller */
-      height:auto;
-      margin:0 auto;
-      display:block;
+    .post-img {
+      width: 80%; /* 20% smaller */
+      height: auto;
+      margin: 0 auto;
+      display: block;
     }
 
     /* ---------- MOBILE (≤480 px) ---------- */
-    @media (max-width:480px){
-      body{
-        padding:220px 0 40px;
+    @media (max-width: 480px) {
+      body {
+        padding: 220px 0 40px;
       }
 
-      .back-wrapper{
-        top:8px;left:8px;
-        width:56px;height:56px;
-        z-index:999;pointer-events:auto;
+      .back-wrapper {
+        top: 8px;
+        left: 8px;
+        width: 56px;
+        height: 56px;
+        z-index: 999;
+        pointer-events: auto;
       }
 
-      .header-wrapper{
-        width:85%;height:90px;top:72px;
+      .header-wrapper {
+        width: 85%;
+        height: 90px;
+        top: 72px;
       }
-      .header-img{transform:translateY(-10px);}
+      .header-img { transform: translateY(-10px); }
 
-      .upper-feature-container{
-        width:94%;
-        margin-top:16px;
+      .post-container {
+        width: 94%;
+        margin-top: 16px;
       }
-      .upper-img{
-        width:80%;                   /* keep 20 % shrink */
-      }
-
-      .feature-container{
-        width:94%;
-        margin-top:8px;
-      }
-      .feature-img{
-        width:80%;                   /* keep 20 % shrink */
+      .post-img {
+        width: 80%;
       }
     }
   </style>
@@ -118,14 +110,19 @@
     <img src="images/chelseapost-header.png" alt="Chelsea Post Header" class="header-img">
   </div>
 
-  <!-- NEW upper image -->
-  <div class="upper-feature-container">
-    <img src="images/chelseapost2.png" alt="Chelsea Post Image 2" class="upper-img">
+  <!-- New Chelsea Post 3 -->
+  <div class="post-container">
+    <img src="images/chelseapost3.png" alt="Chelsea Post Image 3" class="post-img">
   </div>
 
-  <!-- Existing feature image -->
-  <div class="feature-container">
-    <img src="images/chelseapost1.png" alt="Chelsea Post Image 1" class="feature-img">
+  <!-- Chelsea Post 2 -->
+  <div class="post-container">
+    <img src="images/chelseapost2.png" alt="Chelsea Post Image 2" class="post-img">
+  </div>
+
+  <!-- Chelsea Post 1 -->
+  <div class="post-container">
+    <img src="images/chelseapost1.png" alt="Chelsea Post Image 1" class="post-img">
   </div>
 
 </body>
