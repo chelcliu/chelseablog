@@ -9,7 +9,7 @@
     body {
       font-family: sans-serif;
       margin: 0;
-      padding: 160px 0 60px;
+      padding: 100px 0 60px; /* Reduced top padding */
       background: #fafafa;
       text-align: center;
     }
@@ -51,26 +51,20 @@
       display: block;
     }
 
-    /* ---------- TOP (new) feature image ---------- */
-    .top-feature-container {
+    /* ---------- Photo containers ---------- */
+    .photo-container {
       width: 80%;
-      margin: 160px auto 0; /* Adjusted to appear after header */
+      margin: 20px auto 0;
     }
-    .top-img {
+    .photo-img {
       width: 100%;
       height: auto;
       display: block;
     }
 
-    /* ---------- UPPER (existing photooftheweek2) image ---------- */
-    .upper-feature-container {
-      width: 80%;
-      margin: 20px auto 0;
-    }
-    .upper-img {
-      width: 100%;
-      height: auto;
-      display: block;
+    /* Reduced space below header */
+    .photo-container.first {
+      margin-top: 60px; /* Further reduced from 120px */
     }
 
     /* ---------- Existing feature image (photooftheweek1) ---------- */
@@ -90,7 +84,7 @@
     /* ---------- MOBILE OPTIMIZATION (≤480 px) ---------- */
     @media (max-width: 480px) {
       body {
-        padding: 220px 0 40px;
+        padding: 220px 0 40px; /* Mobile stays the same */
       }
 
       .back-wrapper {
@@ -112,14 +106,13 @@
         transform: translateY(-10px);
       }
 
-      .top-feature-container,
-      .upper-feature-container {
+      .photo-container {
         width: 94%;
         margin-top: 16px;
       }
 
-      .top-feature-container {
-        margin-top: 220px; /* pushes image after header on small screens */
+      .photo-container.first {
+        margin-top: 220px; /* Keeps space on mobile */
       }
 
       .feature-container {
@@ -146,19 +139,29 @@
     <img src="images/photooftheweek-header.png" alt="Photo of the Week" class="header-img">
   </div>
 
-  <!-- TOP new image (photooftheweek3) -->
-  <div class="top-feature-container">
-    <img src="images/photooftheweek3.png" alt="Top Featured Photo" class="top-img">
+  <!-- New photooftheweek5 -->
+  <div class="photo-container first">
+    <img src="images/photooftheweek5.png" alt="Photo of the Week 5" class="photo-img">
   </div>
 
-  <!-- UPPER existing image (photooftheweek2) -->
-  <div class="upper-feature-container">
-    <img src="images/photooftheweek2.png" alt="Additional Photo" class="upper-img">
+  <!-- New photooftheweek4 -->
+  <div class="photo-container">
+    <img src="images/photooftheweek4.png" alt="Photo of the Week 4" class="photo-img">
+  </div>
+
+  <!-- Existing photooftheweek3 -->
+  <div class="photo-container">
+    <img src="images/photooftheweek3.png" alt="Photo of the Week 3" class="photo-img">
+  </div>
+
+  <!-- Existing photooftheweek2 -->
+  <div class="photo-container">
+    <img src="images/photooftheweek2.png" alt="Photo of the Week 2" class="photo-img">
   </div>
 
   <!-- Existing feature image (photooftheweek1) -->
   <div class="feature-container">
-    <img src="images/photooftheweek1.png" alt="Featured Photo" class="feature-img">
+    <img src="images/photooftheweek1.png" alt="Photo of the Week 1" class="feature-img">
   </div>
 
 </body>
